@@ -17,8 +17,7 @@
         "Jon Clausen <jclausen@ortussolutions.com>"
     ],
     "dependencies"  :{
-        "cbjavaloader" : "^2.0.0",
-        "cbelasticsearch" : "^2.0.0"
+        "cbjavaloader" : "^2.0.0"
     },
     "ignore":[
         "tests",
