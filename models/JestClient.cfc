@@ -10,7 +10,6 @@
 */
 component
 	accessors="true"
-	implements="cbelasticsearch.models.iNativeClient"
 	threadSafe
 	singleton
 {
