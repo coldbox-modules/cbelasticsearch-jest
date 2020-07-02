@@ -250,6 +250,14 @@ component
 
 		var searchResult = execute( jCountBuilder.build() );
 
+		if ( structKeyExists( searchResult, "error" ) ){
+			throw(
+				type="cbElasticsearch.JestClient.IndexCountException",
+				message=( isSimpleValue( searchResult.error ) ? searchResult.error : searchResult.error.reason ),
+				extendedInfo=serializeJSON( searchResult[ "error" ], false, listFindNoCase( "Lucee", server.coldfusion.productname ) ? "utf-8" : false )
+			);
+		}
+
 		return searchResult[ "count" ];
 
 	}
